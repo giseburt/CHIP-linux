@@ -39,6 +39,12 @@ int drm_gem_cma_dumb_create(struct drm_file *file_priv,
 			    struct drm_device *drm,
 			    struct drm_mode_create_dumb *args);
 
+/* allocate an object with the given size and return a GEM handle to it */
+static struct drm_gem_cma_object *
+drm_gem_cma_create_with_handle(struct drm_file *file_priv,
+			       struct drm_device *drm, size_t size,
+			       uint32_t *handle)
+
 /* map memory region for DRM framebuffer to user space */
 int drm_gem_cma_dumb_map_offset(struct drm_file *file_priv,
 				struct drm_device *drm, u32 handle,
