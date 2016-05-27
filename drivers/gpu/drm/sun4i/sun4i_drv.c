@@ -72,8 +72,7 @@ static int sun4i_gem_create_ioctl(struct drm_device *drm, void *data,
 	/* The Mali requires a 64 bytes alignment */
 	size = ALIGN(args->size, 64);
 
-	cma_obj = drm_gem_cma_create_with_handle(file_priv, drm, size,
-						 &args->handle);
+	cma_obj = drm_gem_cma_dumb_create(file_priv, drm, size, &args);
 
 	return PTR_ERR_OR_ZERO(cma_obj);
 }
