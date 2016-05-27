@@ -1,0 +1,5 @@
+linux-4.4.6 (4.4.6-ntc-1) jessie; urgency=high
+
+  * fork from May 26th freeze point of nextthing/4.4/next
+
+ -- Ben Young <software@nextthing.co> Thu, 26 May 2016 23:41:00 -0800
