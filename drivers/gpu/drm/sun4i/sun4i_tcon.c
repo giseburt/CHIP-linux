@@ -131,6 +131,11 @@ void sun4i_tcon0_mode_set(struct sun4i_tcon *tcon,
 			   SUN4I_TCON0_CTL_CLK_DELAY_MASK,
 			   SUN4I_TCON0_CTL_CLK_DELAY(clk_delay));
 
+	/* Set HV mode to 8-bit serial */
+	regmap_update_bits(tcon->regs, SUN4I_TCON0_HV_IF_REG,
+			   SUN4I_TCON0_HV_IF_HV_MODE,
+			   1);
+
 	/* Set the resolution */
 	regmap_write(tcon->regs, SUN4I_TCON0_BASIC0_REG,
 		     SUN4I_TCON0_BASIC0_X(mode->crtc_hdisplay) |

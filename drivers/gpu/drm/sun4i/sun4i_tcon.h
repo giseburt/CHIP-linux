@@ -59,6 +59,7 @@
 #define SUN4I_TCON0_BASIC3_V_SYNC(height)		(((height) - 1) & 0x7ff)
 
 #define SUN4I_TCON0_HV_IF_REG			0x58
+#define SUN4I_TCON0_HV_IF_HV_MODE		BIT(31)
 #define SUN4I_TCON0_CPU_IF_REG			0x60
 #define SUN4I_TCON0_CPU_WR_REG			0x64
 #define SUN4I_TCON0_CPU_RD0_REG			0x68
